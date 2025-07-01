@@ -1,0 +1,230 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>可可影视官网入口 - 免费高清影视平台，全网资源一网打尽</title>
+  <meta name="keywords" content="可可影视,免费高清影视,电影,电视剧,动漫,综艺">
+  <meta name="description" content="可可影视是一个提供丰富影视资源的在线视频平台，支持多种设备，拥有高清画质和流畅的观影体验。平台资源丰富，涵盖电影、电视剧、动漫、综艺等多种类型，更新速度快，还支持Netflix资源。">
+  <script src="https://cdn.tailwindcss.com/3.4.16"></script>
+  <script>
+    tailwind.config = { darkMode: `class` }
+  </script>
+  <link href="https://cdn.bootcdn.net/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
+  <link rel="shortcut icon" href="./ico.png">
+  <link rel="manifest" href="site.webmanifest">
+  <script>
+    // 自定义Tailwind配置
+    tailwind.config = {
+        theme: {
+            extend: {
+                colors: {
+                    primary: '#E50914', // 红色主色调
+                    secondary: '#FF6B6B', // 浅红色辅助色
+                    neutral: {
+                        100: '#F8F9FA',
+                        200: '#E9ECEF',
+                        700: '#343A40',
+                        800: '#212529',
+                        900: '#121212'
+                    }
+                },
+                fontFamily: {
+                    inter: ['Inter', 'system-ui', 'sans-serif'],
+                },
+            }
+        }
+    }
+  </script>
+  <style type="text/tailwindcss"> @layer utilities {
+            .content-auto {
+                content-visibility: auto;
+            }
+            .text-shadow {
+                text-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            }
+            .hover-scale {
+                transition: transform 0.3s ease;
+            }
+            .hover-scale:hover {
+                transform: scale(1.03);
+            }
+            .feature-card {
+                @apply bg-white dark:bg-gray-800 rounded-xl p-6 shadow-md transition-all duration-300 hover:shadow-lg hover:-translate-y-1;
+            }
+            .resource-card {
+                @apply bg-white dark:bg-gray-800 rounded-xl overflow-hidden shadow-md hover:shadow-xl transition-all duration-300 hover:-translate-y-1;
+            }
+            .fade-in {
+                opacity: 0;
+                transform: translateY(20px);
+                animation: fadeIn 0.8s ease forwards;
+            }
+            @keyframes fadeIn {
+                to {
+                    opacity: 1;
+                    transform: translateY(0);
+                }
+            }
+        }
+    </style>
+</head>
+<body class="min-h-screen font-inter bg-gray-50 dark:bg-gray-900 text-gray-800 dark:text-gray-200">
+  <div class="container mx-auto px-4 py-8 max-w-7xl">
+    <!-- 导航栏 -->
+    <nav class="fixed top-0 left-0 right-0 z-50 bg-white/90 dark:bg-gray-800/90 backdrop-blur-md shadow-sm transition-all duration-300" id="navbar">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="flex justify-between h-16">
+          <div class="flex items-center">
+            <a href="#" class="flex-shrink-0 flex items-center">
+              <span class="text-primary font-bold text-xl">可可影视</span>
+            </a>
+            <div class="hidden sm:ml-6 sm:flex sm:space-x-8">
+              <a href="#about" class="border-b-2 border-primary px-1 pt-1 text-sm font-medium text-primary">网站介绍</a>
+              <a href="#features" class="border-transparent hover:border-primary px-1 pt-1 text-sm font-medium text-gray-500 dark:text-gray-400 hover:text-primary">功能特点</a>
+            </div>
+          </div>
+          <div class="flex items-center">
+            <button class="p-2 rounded-full hover:bg-gray-100 dark:hover:bg-gray-700 transition-colors" id="themeToggle">
+              <i class="fas fa-moon-o text-gray-500 dark:text-yellow-400"></i>
+            </button>
+            <button class="ml-4 block sm:hidden p-2 rounded-md text-gray-500 dark:text-gray-400 hover:text-primary hover:bg-gray-100 dark:hover:bg-gray-700" id="mobile-menu-button">
+              <i class="fas fa-bars"></i>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- 移动端菜单 -->
+      <div class="sm:hidden hidden" id="mobile-menu">
+        <div class="pt-2 pb-3 space-y-1 px-4">
+          <a href="#about" class="bg-primary/5 border-l-4 border-primary text-primary block pl-3 pr-4 py-2 text-base font-medium">网站介绍</a>
+          <a href="#features" class="border-l-4 border-transparent hover:border-primary hover:bg-primary/5 text-gray-600 dark:text-gray-300 hover:text-primary block pl-3 pr-4 py-2 text-base font-medium">功能特点</a>
+        </div>
+      </div>
+    </nav>
+    <header class="relative bg-gradient-to-r from-primary to-secondary text-white py-16 md:py-24 pt-24">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
+        <div class="text-center fade-in">
+          <h1 class="text-4xl md:text-5xl font-bold mb-4 text-shadow">可可影视</h1>
+          <p class="text-xl md:text-2xl max-w-3xl mx-auto opacity-90">免费高清影视平台，全网资源一网打尽</p>
+          <div class="mt-8 flex flex-col md:flex-row justify-center space-y-4 md:space-y-0 md:space-x-6">
+            <a class="bg-white text-primary hover:bg-gray-100 hover:scale-105 transition-transform font-medium py-3 px-6 rounded-lg shadow-lg" href="https://www.rymdh.com/sites/14364.html" target="_blank">
+              <i class="fas fa-external-link-alt mr-2"></i>访问官网 </a>
+            <a class="bg-white text-primary hover:bg-gray-100 hover:scale-105 transition-transform font-medium py-3 px-6 rounded-lg shadow-lg" href="https://wangpanziyuan.pages.dev/" target="_blank" content="nofollow">
+              <i class="fas fa-external-link-alt mr-2"></i>电子书/电影/音乐/漫画/游戏下载 </a>
+          </div>
+        </div>
+      </div>
+      <div class="absolute inset-0 bg-black opacity-10"></div>
+    </header>
+    <!-- 增加隔离空间 -->
+    <div class="h-5 md:h-10"></div>
+    <!-- 网站介绍部分 -->
+    <section id="about" class="mb-16 fade-in" style="animation-delay: 0.4s">
+      <h2 class="text-2xl font-bold mb-8">网站介绍</h2>
+      <div class="bg-white dark:bg-gray-800 rounded-xl p-8 shadow-lg">
+        <div>
+          <p class="text-gray-700 dark:text-gray-300 leading-relaxed mb-4"> 可可影视是一个提供丰富影视资源的在线视频平台，支持网页端、Android端、iOS端、Windows端以及TV版等多种设备。它以高清、流畅的观影体验深受用户喜爱，资源涵盖国内外热门影视作品，更新速度快。此外，可可影视还支持多种特色功能，如Netflix资源频道、短视频和直播等，满足用户多样化的观影需求。</p>
+        </div>
+      </div>
+    </section>
+    <!-- 功能特点部分 -->
+    <section id="features" class="mb-16 fade-in" style="animation-delay: 0.6s">
+      <h2 class="text-2xl font-bold mb-8">功能特点</h2>
+      <div class="grid grid-cols-1 md:grid-cols-3 gap-6">
+        <div class="feature-card">
+          <h3 class="text-xl font-semibold mb-4">丰富的影视资源</h3>
+          <p class="text-gray-600 dark:text-gray-300">可可影视拥有庞大的影视资源库，涵盖电影、电视剧、动漫、综艺等多种类型。从最新院线大片到经典老片，从热门电视剧到小众佳作，用户都能轻松找到。平台还设有详细的分类标签和强大的搜索引擎，方便用户快速定位心仪影片。此外，可可影视还提供Netflix资源频道，满足用户对海外影视作品的需求。 </p>
+        </div>
+        <div class="feature-card">
+          <h3 class="text-xl font-semibold mb-4">高清流畅播放</h3>
+          <p class="text-gray-600 dark:text-gray-300">可可影视注重观影体验，支持多种清晰度选择，包括高清、超清、蓝光等，适合不同网络环境。平台采用先进的视频压缩技术，减少流量消耗的同时保持高清画质。此外，可可影视还内置多条高清线路源，用户可以根据网络情况自由切换，确保观影流畅。</p>
+        </div>
+        <div class="feature-card">
+          <h3 class="text-xl font-semibold mb-4">个性化功能</h3>
+          <p class="text-gray-600 dark:text-gray-300">可可影视具备智能推荐功能，根据用户的观影历史和偏好，精准推荐符合用户兴趣的影视作品。此外，平台还支持自动记录播放历史，方便用户继续观看。用户还可以通过离线缓存功能下载影视内容，随时随地离线观看。</p>
+        </div>
+      </div>
+    </section>
+    <!-- 页脚 -->
+    <footer class="bg-gray-100 dark:bg-gray-800 py-12 rounded-xl">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <div class="flex items-center justify-center mb-6">
+          <span class="text-primary font-bold text-xl">可可影视网</span>
+        </div>
+        <p class="text-gray-600 dark:text-gray-400 text-sm"> &copy; 2025 可可影视网. 保留所有权利. </p>
+      </div>
+    </footer>
+  </div>
+  <script>
+    // 导航栏滚动效果
+    window.addEventListener('scroll', function() {
+        const navbar = document.getElementById('navbar');
+        if (window.scrollY > 50) {
+            navbar.classList.add('shadow-md');
+            navbar.classList.remove('shadow-sm');
+        } else {
+            navbar.classList.remove('shadow-md');
+            navbar.classList.add('shadow-sm');
+        }
+    });
+    
+    // 移动端菜单切换
+    document.getElementById('mobile-menu-button').addEventListener('click', function() {
+        const mobileMenu = document.getElementById('mobile-menu');
+        mobileMenu.classList.toggle('hidden');
+    });
+    
+    // 暗色模式切换
+    document.getElementById('themeToggle').addEventListener('click', function() {
+        document.documentElement.classList.toggle('dark');
+        
+        // 切换图标
+        const icon = this.querySelector('i');
+        if (document.documentElement.classList.contains('dark')) {
+            icon.classList.remove('fa-moon-o');
+            icon.classList.add('fa-sun-o');
+        } else {
+            icon.classList.remove('fa-sun-o');
+            icon.classList.add('fa-moon-o');
+        }
+    });
+    
+    // 平滑滚动
+    document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+        anchor.addEventListener('click', function (e) {
+            e.preventDefault();
+            
+            const targetId = this.getAttribute('href');
+            const targetElement = document.querySelector(targetId);
+            
+            if (targetElement) {
+                window.scrollTo({
+                    top: targetElement.offsetTop - 80,
+                    behavior: 'smooth'
+                });
+                
+                // 关闭移动端菜单
+                document.getElementById('mobile-menu').classList.add('hidden');
+            }
+        });
+    });
+    
+    // 元素进入视口时的淡入效果
+    const fadeElements = document.querySelectorAll('.fade-in');
+    
+    const fadeInObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            if (entry.isIntersecting) {
+                entry.target.style.animationPlayState = 'running';
+                fadeInObserver.unobserve(entry.target);
+            }
+        });
+    }, { threshold: 0.1 });
+    
+    fadeElements.forEach(element => {
+        fadeInObserver.observe(element);
+    });
+  </script>
+</body>
+</html>
